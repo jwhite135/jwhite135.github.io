@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Calendar, GraduationCap, Code, Terminal } from 'lucide-react';
+import { MapPin, Calendar, GraduationCap } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
@@ -28,7 +28,6 @@ const About: React.FC = () => {
       </motion.div>
 
       <div className="grid lg:grid-cols-2 gap-8">
-        {/* Left Column - Terminal Style */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,7 +35,6 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="space-y-6"
         >
-          {/* Terminal Window */}
           <div className="vscode-terminal p-4">
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">
@@ -65,7 +63,6 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Stats in VS Code Style */}
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat, index) => (
               <motion.div
@@ -83,7 +80,6 @@ const About: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Right Column - Java Code Style */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -133,7 +129,6 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Personal Info in VS Code Style */}
           <div className="space-y-3">
             <div className="flex items-center gap-3 text-[#cccccc]">
               <MapPin className="w-5 h-5 vscode-icon" />
@@ -150,8 +145,6 @@ const About: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
-
     </div>
   );
 };

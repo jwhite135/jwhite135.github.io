@@ -8,19 +8,11 @@ import {
   Briefcase, 
   Mail, 
   Folder,
-  File,
-  Settings,
-  Search,
-  GitBranch,
-  Play,
-  Terminal,
   ChevronRight,
   PanelLeftClose,
   PanelLeft,
   Linkedin,
   Github,
-  Twitter,
-  ExternalLink,
   FileText as FileTextIcon
 } from 'lucide-react';
 
@@ -73,7 +65,7 @@ function App() {
       icon: <Folder className="w-4 h-4" />,
       isFolder: true,
       files: [
-        { name: 'ECommerceApp.java', type: 'file' },
+        { name: 'CodeCollab.java', type: 'file' },
         { name: 'KeyQuest.java', type: 'file' },
         { name: 'CockBots.py', type: 'file' },
         { name: 'PortfolioWebsite.tsx', type: 'file' },
@@ -285,9 +277,9 @@ function App() {
             </button>
           ))}
           {/* Project Tabs */}
-          {activeTab === 'ecommerceapp' && (
+          {activeTab === 'codecollab' && (
             <button className="vscode-tab active">
-              ECommerceApp.java
+              CodeCollab.java
             </button>
           )}
           {activeTab === 'keyquest' && (
@@ -426,7 +418,7 @@ function App() {
               {activeTab === 'projects' && <Projects onProjectClick={(projectName) => setActiveTab(projectName)} />}
               {activeTab === 'contact' && <Contact />}
               {/* Project Detail Pages */}
-              {activeTab === 'ecommerceapp' && <ProjectDetails projectName="ecommerceapp" />}
+              {activeTab === 'codecollab' && <ProjectDetails projectName="codecollab" />}
               {activeTab === 'keyquest' && <ProjectDetails projectName="keyquest" />}
               {activeTab === 'cockbots' && <ProjectDetails projectName="cockbots" />}
               {activeTab === 'portfoliowebsite' && <ProjectDetails projectName="portfoliowebsite" />}

@@ -8,37 +8,52 @@ interface ProjectDetailsProps {
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectName }) => {
   const projects = {
-    'ecommerceapp': {
-      title: 'ECommerceApp',
-      description: 'A full-stack e-commerce application built with Java Spring Boot.',
-      longDescription: `A comprehensive e-commerce platform that demonstrates modern web development practices using Java Spring Boot framework. This project showcases RESTful API design, database management, and secure user authentication.
+    'codecollab': {
+      title: 'CodeCollab - Real-Time Collaborative Coding Platform',
+      description: 'A comprehensive real-time collaborative coding platform built with Spring Boot and React, featuring WebSocket-based collaboration and Monaco Editor integration.',
+      longDescription: `CodeCollab is an innovative real-time collaborative coding platform that enables multiple developers to simultaneously edit code files with live synchronization. Built with enterprise-grade architecture, this project aims to be the "Google Docs for developers" - a comprehensive platform where teams can write, review, and collaborate on code in real-time.
 
-## Features
-- **User Authentication**: Secure login and registration system
-- **Product Management**: CRUD operations for product catalog
-- **Shopping Cart**: Persistent cart functionality with session management
-- **Order Processing**: Complete order lifecycle from cart to confirmation
-- **Admin Dashboard**: Backend management interface for inventory and orders
+## Project Overview
+This fully realized platform transforms the way developers collaborate by providing real-time code editing capabilities with advanced features like presence indicators, cursor tracking, and operational transformation algorithms. The system ensures seamless multi-user editing experience while maintaining code integrity and performance. The platform includes comprehensive version control, advanced collaboration tools, and enterprise-grade features that make it a complete solution for team development.
 
-## Technical Stack
-- **Backend**: Java Spring Boot, Spring Security, Spring Data JPA
-- **Database**: MySQL with Hibernate ORM
-- **API**: RESTful endpoints with JSON responses
-- **Testing**: JUnit 5 with Mockito for unit testing
-- **Build Tool**: Maven for dependency management
+## Key Features
+- **Real-Time Collaboration**: WebSocket-based live synchronization with multiple users
+- **Monaco Editor Integration**: VS Code's editor engine with custom collaboration features
+- **Presence Indicators**: Visual feedback showing who's currently editing
+- **Cursor Tracking**: Real-time display of other users' cursor positions
+- **Conflict Resolution**: Operational transformation algorithms for seamless collaboration
+- **Secure Authentication**: JWT-based authentication with Spring Security
+- **Workspace Management**: Organized project structure with team permissions
+- **Git Integration**: Complete version control with branching, merging, and collaborative code review
+- **Advanced Collaboration Tools**: Inline comments, code review system, and team communication
+- **Multi-language Support**: Intelligent language detection and syntax highlighting for 20+ programming languages
 
-## Architecture
-The application follows a layered architecture pattern:
-- **Controller Layer**: Handles HTTP requests and responses
-- **Service Layer**: Business logic implementation
-- **Repository Layer**: Data access and persistence
-- **Entity Layer**: JPA entities for database mapping`,
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'JUnit', 'Maven'],
-      githubUrl: '#',
+## Technical Architecture
+- **Backend**: Spring Boot 3.2+ with Java 17, Spring Security, WebSocket with STOMP
+- **Database**: PostgreSQL 15+ with JPA/Hibernate, Redis 7+ for caching
+- **Frontend**: React 18+ with TypeScript, Monaco Editor, Redux Toolkit
+- **Real-time Communication**: WebSocket with STOMP protocol, Socket.io client
+- **Security**: JWT tokens, role-based access control
+- **Build & Deployment**: Maven, Docker, Docker Compose
+
+## Development Highlights
+- **Real-Time Collaboration**: Implemented WebSocket-based real-time collaboration with presence indicators and cursor tracking
+- **Enterprise Security**: Built secure authentication system using JWT tokens and Spring Security
+- **Scalable Architecture**: Designed scalable database architecture with PostgreSQL and Redis
+- **Advanced Editor**: Integrated Monaco Editor with custom collaboration features
+- **Performance Optimization**: Implemented proper indexing and caching strategies
+
+## Advanced Features
+- **Git Integration**: Complete version control system with branching, merging, and collaborative code review workflows
+- **Advanced Collaboration Tools**: Inline comments, code review system, and integrated team communication features
+- **Multi-language Support**: Intelligent language detection, syntax highlighting, and language-specific development tools for 20+ programming languages
+- **Enterprise Features**: Advanced caching strategies, load balancing, and microservices architecture supporting enterprise-level usage`,
+      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'React', 'TypeScript', 'WebSocket', 'Monaco Editor', 'Spring Security', 'JWT'],
+      githubUrl: 'https://github.com/jwhite135/CodeCollab',
       liveUrl: '#',
-      duration: '3 months',
+      duration: '6 months',
       teamSize: 'Solo',
-      achievements: ['Implemented secure authentication system', 'Designed scalable database schema', 'Achieved 90% test coverage']
+      achievements: ['Developed real-time collaborative coding platform with WebSocket technology', 'Implemented enterprise-grade security with JWT and Spring Security', 'Integrated Monaco Editor with custom collaboration features', 'Designed scalable architecture with PostgreSQL and Redis']
     },
     'keyquest': {
       title: 'KeyQuest - Music Learning Application',

@@ -14,7 +14,6 @@ const Contact: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
-    // Initialize EmailJS with your public key
     emailjs.init("ALHC7UWtOIeyVm-hs");
   }, []);
 
@@ -57,8 +56,6 @@ const Contact: React.FC = () => {
     });
   };
 
-
-
   return (
     <div className="p-6 vscode-content">
       <motion.div
@@ -72,12 +69,11 @@ const Contact: React.FC = () => {
           <span className="vscode-keyword">public class</span> <span className="vscode-class">Contact</span> &#123;
         </h2>
         <p className="text-[#cccccc] text-lg max-w-2xl">
-          <span className="vscode-comment">// Ready to work together? Let's discuss your next project</span>
+          Ready to work together? Let's discuss your next project
         </p>
       </motion.div>
 
       <div className="max-w-2xl mx-auto">
-        {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -208,7 +204,6 @@ const Contact: React.FC = () => {
                 )}
               </motion.button>
 
-              {/* Status Messages */}
               {submitStatus === 'success' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}

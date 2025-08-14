@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Globe, Folder, File, BookOpen } from 'lucide-react';
+import { Github, BookOpen } from 'lucide-react';
 
 interface ProjectsProps {
   onProjectClick?: (projectName: string) => void;
@@ -9,13 +9,13 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with Java Spring Boot, React, and Stripe integration. Features include user authentication, product management, and real-time inventory tracking.',
-      image: '🛒',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Stripe', 'React'],
-      githubUrl: '#',
+      title: 'CodeCollab - Real-Time Collaborative Coding Platform',
+      description: 'A comprehensive real-time collaborative coding platform built with Spring Boot and React, featuring WebSocket-based collaboration, Monaco Editor integration, and enterprise-grade security. Enables multiple developers to simultaneously edit code with live synchronization.',
+      image: '💻',
+      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'React', 'TypeScript', 'WebSocket', 'Monaco Editor'],
+      githubUrl: 'https://github.com/jwhite135/CodeCollab',
       featured: true,
-      projectName: 'ecommerceapp'
+      projectName: 'codecollab'
     },
     {
       title: 'KeyQuest - Music Learning Application',
@@ -32,7 +32,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
       image: '🤖',
       technologies: ['PHP', 'SQL', 'Python', 'TensorFlow', 'AI'],
       githubUrl: 'https://github.com/ethanhammer/Hackathon-Cock-Bots',
-      featured: false,
+      featured: true,
       projectName: 'cockbots'
     },
     {
@@ -40,7 +40,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
       description: 'You\'re looking at it (⚆ᗝ⚆)',
       image: '💼',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Recursion?'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/jwhite135/PortfolioWebsite',
       featured: false,
       projectName: 'portfoliowebsite'
     },
@@ -93,10 +93,8 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
               project.featured ? 'ring-2 ring-[#007acc]' : ''
             }`}
           >
-            {/* Project Header */}
             <div className="vscode-title-bar flex items-center justify-between p-3">
               <div className="flex items-center gap-2">
-                <File className="w-4 h-4 vscode-icon" />
                 <span className="text-sm font-medium">{project.title}</span>
               </div>
               {project.featured && (
@@ -104,9 +102,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
               )}
             </div>
 
-            {/* Project Content */}
             <div className="p-4 flex flex-col flex-1">
-              {/* Project Icon */}
               <div className="h-32 bg-[#2a2d2e] flex items-center justify-center mb-4 rounded">
                 <span className="text-4xl">{project.image}</span>
               </div>
@@ -115,7 +111,6 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
                 {project.description}
               </p>
 
-              {/* Technologies */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
                   <span
@@ -127,10 +122,8 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
                 ))}
               </div>
 
-              {/* Spacer to push buttons to bottom */}
               <div className="flex-grow"></div>
 
-              {/* Project Links */}
               <div className="flex gap-2">
                 {onProjectClick && (
                   <motion.button
@@ -159,7 +152,6 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
           </motion.div>
         ))}
       </div>
-
     </div>
   );
 };

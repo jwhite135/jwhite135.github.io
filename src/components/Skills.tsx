@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Palette, Cloud } from 'lucide-react';
+import { Code, Database, Cloud } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const skillCategories = [
@@ -113,7 +113,6 @@ const Skills: React.FC = () => {
         ))}
       </div>
 
-      {/* Additional Skills */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

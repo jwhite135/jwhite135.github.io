@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, File, Folder } from 'lucide-react';
+import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const experiences = [
@@ -15,6 +15,19 @@ const Experience: React.FC = () => {
         'Received competitive research grant to develop a MIPS assembly interpreter within the Godot engine using C++',
         'Designed a virtual machine to parse and execute MIPS instructions, modeling registers, memory, and instruction flow within a game engine environment',
         'Explored integration of low-level systems concepts with game development, laying groundwork for a MIPS-based game engine'
+      ]
+    },
+    {
+      title: 'Undergraduate Teaching Assistant',
+      company: 'University of South Carolina',
+      location: 'Columbia, SC',
+      period: 'Aug 2025 - Present',
+      description: 'Supporting computer science education by leading laboratory sessions and mentoring students in fundamental programming concepts. Collaborating with faculty to develop and enhance course materials while providing personalized guidance to help students master Java programming, object-oriented design, and problem-solving methodologies.',
+      technologies: ['Java', 'Leadership', 'Teaching'],
+      achievements: [
+        'Supervised labs and mentor 50+ students in Java fundamentals, problem-solving, and algorithmic thinking',
+        'Guided students through debugging and core OOP concepts; enhance exercises with faculty collaboration',
+        'Graded assignments and provide feedback to improve programming and design skills'
       ]
     }
   ];
@@ -46,7 +59,6 @@ const Experience: React.FC = () => {
             viewport={{ once: true }}
             className="vscode-terminal p-4"
           >
-            {/* Experience Header */}
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-xl font-semibold text-[#cccccc] mb-1">{exp.title}</h3>
@@ -67,12 +79,10 @@ const Experience: React.FC = () => {
               </div>
             </div>
 
-            {/* Description */}
             <p className="text-[#cccccc] text-sm leading-relaxed mb-4">
               {exp.description}
             </p>
 
-            {/* Technologies */}
             <div className="flex flex-wrap gap-2 mb-4">
               {exp.technologies.map((tech) => (
                 <span
@@ -84,7 +94,6 @@ const Experience: React.FC = () => {
               ))}
             </div>
 
-            {/* Achievements */}
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-[#cccccc]">Key Achievements:</h4>
               <ul className="space-y-1">
@@ -100,7 +109,6 @@ const Experience: React.FC = () => {
         ))}
       </div>
 
-      {/* Education Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
